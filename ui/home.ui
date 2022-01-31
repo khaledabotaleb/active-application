@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>846</width>
+    <height>665</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Active Clinic Application</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="TabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>25</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>icons/icons8-patient-64.png</normaloff>icons/icons8-patient-64.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Patient</string>
+     </attribute>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>icons/icons8-appointment-50.png</normaloff>icons/icons8-appointment-50.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Appointments</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>icons/icons8-nurse-male-48.png</normaloff>icons/icons8-nurse-male-48.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Staff</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>icons/icons8-plus-1-week-48.png</normaloff>icons/icons8-plus-1-week-48.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Available Days</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>460</y>
+      <width>6</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>490</y>
+      <width>6</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>846</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionAdd_Patient"/>
+    <addaction name="actionAdd_Appointment"/>
+    <addaction name="actionStaff"/>
+    <addaction name="actionAvailable_Days"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAdd_Patient">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/005-add.png</normaloff>icons/005-add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Patient</string>
+   </property>
+  </action>
+  <action name="actionAdd_Appointment">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/icons8-appointment-50.png</normaloff>icons/icons8-appointment-50.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Appointment</string>
+   </property>
+  </action>
+  <action name="actionStaff">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/icons8-nurse-male-48.png</normaloff>icons/icons8-nurse-male-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Staff</string>
+   </property>
+  </action>
+  <action name="actionAvailable_Days">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/icons8-plus-1-week-48.png</normaloff>icons/icons8-plus-1-week-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Available Days</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/close.png</normaloff>icons/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TabWidget</class>
+   <extends>QTabWidget</extends>
+   <header location="global">tabwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
