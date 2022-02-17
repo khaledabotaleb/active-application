@@ -139,7 +139,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QComboBox" name="comboBox">
+            <widget class="QComboBox" name="gender">
              <property name="minimumSize">
               <size>
                <width>150</width>
@@ -166,7 +166,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_2">
+            <widget class="QLineEdit" name="mobile">
              <property name="minimumSize">
               <size>
                <width>300</width>
@@ -193,7 +193,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_3"/>
+            <widget class="QLineEdit" name="address"/>
            </item>
           </layout>
          </item>
@@ -209,14 +209,14 @@
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_2">
+          <widget class="QRadioButton" name="radio_new">
            <property name="text">
             <string> New</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton">
+          <widget class="QRadioButton" name="radio_exiting">
            <property name="text">
             <string>Existing</string>
            </property>
@@ -230,7 +230,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="comming_from"/>
          </item>
         </layout>
        </item>
@@ -244,7 +244,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_5"/>
+          <widget class="QLineEdit" name="height"/>
          </item>
          <item>
           <widget class="QLabel" name="label_9">
@@ -254,7 +254,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_6"/>
+          <widget class="QLineEdit" name="weight"/>
          </item>
         </layout>
        </item>
@@ -268,7 +268,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_7"/>
+          <widget class="QLineEdit" name="disease"/>
          </item>
         </layout>
        </item>
@@ -282,7 +282,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit"/>
+          <widget class="QTextEdit" name="diagnosis"/>
          </item>
         </layout>
        </item>

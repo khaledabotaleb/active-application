@@ -5,6 +5,7 @@ from PyQt5 import *
 import psycopg2
 from DB_Structure import Patient
 
+
 class AddPatient(QWidget):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -66,3 +67,4 @@ class AddPatient(QWidget):
         self.diagnosis.setPlainText('')
         self.weight.setText('')
         self.patient_height.setText('')
+

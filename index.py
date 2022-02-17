@@ -2,11 +2,13 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.uic import loadUiType
-from PyQt5 import uic
+from PyQt5 import uic, QtWidgets
 import psycopg2
 
 import sys
 from addpatient import AddPatient
+from DB_Structure import Patient
+from edit_patient import EditPatient
 
 DashboardUI, _ = loadUiType("ui/dashboard.ui")
 
@@ -17,9 +19,16 @@ class Dashboard(QMainWindow, DashboardUI):
         QMainWindow.__init__(self)
         self.setupUi(self)
         self.Db_connect()
+        self.Show_all_patients()
 
         self.addbutton = self.findChild(QPushButton, 'addrecord')
         self.addbutton.clicked.connect(self.load_add_patient_page)
+
+        self.editbtn = self.findChild(QPushButton, "edit")
+        self.editbtn.clicked.connect(self.load_edit_patient_page)
+
+        self.refresh = self.findChild(QPushButton, 'refresh')
+        self.refresh.clicked.connect(self.Show_all_patients)
 
     def Db_connect(self):
         # connection between app and db
@@ -34,7 +43,22 @@ class Dashboard(QMainWindow, DashboardUI):
 
     def Show_all_patients(self):
         # show all patients
-        pass
+
+        # self.tableWidget.setRowCount(1)
+        # self.tableWidget.setItem(1, 1, QTableWidgetItem("test"))
+        self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget.horizontalHeader().setSectionResizeMode(
+            QHeaderView.Stretch)
+        patients = Patient.select()
+        self.tableWidget.setRowCount(len(patients))
+        rowindex = 0
+        for patient in patients:
+            self.tableWidget.setItem(rowindex, 0, QtWidgets.QTableWidgetItem(str(patient.id)))
+            self.tableWidget.setItem(rowindex, 1, QtWidgets.QTableWidgetItem(patient.patient_name))
+            self.tableWidget.setItem(rowindex, 2, QtWidgets.QTableWidgetItem(str(patient.age)))
+            self.tableWidget.setItem(rowindex, 3, QtWidgets.QTableWidgetItem(patient.gender))
+            self.tableWidget.setItem(rowindex, 4, QtWidgets.QTableWidgetItem(str(patient.mobile)))
+            rowindex = rowindex + 1
 
     def load_add_patient_page(self):
         # add new patient
@@ -42,9 +66,11 @@ class Dashboard(QMainWindow, DashboardUI):
         self.window.show()
         
 
-    def Edit_patient(self):
+    def load_edit_patient_page(self):
         # edit patient data
-        pass
+        selected_id = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
+        self.editwindow = EditPatient(selected_id)
+        self.editwindow.show()
 
     def Delete_patient(self):
         # delete patient from db
