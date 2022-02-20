@@ -192,23 +192,23 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
+            <widget class="QComboBox" name="patient_list">
+             <property name="minimumSize">
               <size>
                <width>300</width>
-               <height>16777215</height>
+               <height>1</height>
               </size>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_4">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>1</height>
+              </size>
+             </property>
              <property name="maximumSize">
               <size>
                <width>100</width>
@@ -221,14 +221,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QDateEdit" name="dateEdit">
-             <property name="maximumSize">
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-            </widget>
+            <widget class="QDateEdit" name="dateEdit"/>
            </item>
           </layout>
          </item>

@@ -26,7 +26,6 @@ class AddPatient(QWidget):
 
         self.addbutton = self.findChild(QPushButton, 'addrecord')
         self.addbutton.clicked.connect(self.addRecord_clicked)
-       
 
     def addRecord_clicked(self):
         status_radio = None
