@@ -2,6 +2,7 @@ from peewee import *
 
 db = PostgresqlDatabase('active_database', host='localhost', port=5432, user='postgres', password='postgres')
 
+
 class Patient(Model):
     patient_name = CharField(null=False)
     age = IntegerField()
@@ -18,13 +19,15 @@ class Patient(Model):
     class Meta:
         database = db
 
+
 class AvailableDays(Model):
-    date = DateField(null=True)
+    day = CharField()
     time_from = TimeField(null=True)
     closed = BooleanField(null=True)
 
     class Meta:
         database = db
+
 
 class Appointments(Model):
     date = DateField(null=True)
@@ -35,15 +38,17 @@ class Appointments(Model):
     class Meta:
         database = db
 
+
 class Staff(Model):
     staff_name = CharField(null=True) 
     age = IntegerField(null=True)
-    role =  CharField(null=True) 
+    role = CharField(null=True)
     address = TextField(null=True)
     gender = CharField(null=True)
 
     class Meta:
         database = db
+
 
 class Visits(Model):
     doctor_id = ForeignKeyField(Staff, backref='doctors', null=True)
@@ -54,6 +59,7 @@ class Visits(Model):
     class Meta:
         database = db
 
+
 class Invoice(Model):
     visit_id = ForeignKeyField(Visits, backref='visits', null=True),
     price = DecimalField(null=True)
@@ -63,6 +69,7 @@ class Invoice(Model):
 
     class Meta:
         database = db
+
 
 db.connect()
 db.create_tables([Patient, Visits, AvailableDays, Appointments, Staff, Invoice])
