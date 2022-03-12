@@ -33,19 +33,10 @@ class AddAppointment(QWidget):
         # print(customer_id)
 
     def selectionchange(self):
-        print("Items in the list are :")
-        # self.cur.execute('''
-        #             SELECT time_from FROM public.availabledays where day='saturday' and closed is null
-        #             ''')
-        # data = self.cur.fetchall()
-
         data = AvailableDays.select(AvailableDays.time_from, AvailableDays.id).where(AvailableDays.day == self.day.currentText(), AvailableDays.closed==False)
         self.date_from.clear()
         for item in data:
             self.date_from.addItem(str(item.time_from), userData=item.id)
-            # self.date_from.itemText(count)
-
-        print("selection changed ", self.day.currentText())
 
     def add_appointment_record(self):
 
@@ -55,7 +46,6 @@ class AddAppointment(QWidget):
 
         appointment = Appointments.create(date=date, attendance=True, patient_id=patient, available_day_id=time)
         appointments_num = Appointments.select().where(Appointments.available_day_id == time).count()
-        print(appointments_num)
         if appointments_num == 6:
             available_day = (AvailableDays.update({AvailableDays.closed: True}).where(AvailableDays.id==time))
             available_day.execute()

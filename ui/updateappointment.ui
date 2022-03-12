@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>775</width>
-    <height>578</height>
+    <width>785</width>
+    <height>323</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -53,18 +53,129 @@
       </font>
      </property>
      <property name="widgetResizable">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>751</width>
-        <height>496</height>
+        <width>761</width>
+        <height>241</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> Patient :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>400</width>
+             <height>1</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>400</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>  Appointment id</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_4">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string> Day :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_2">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>From : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_3">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> Date :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dateEdit">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
@@ -83,7 +194,7 @@
               </font>
              </property>
              <property name="text">
-              <string> Day :</string>
+              <string> New Day :</string>
              </property>
             </widget>
            </item>
@@ -91,32 +202,32 @@
             <widget class="QComboBox" name="comboBox_2">
              <item>
               <property name="text">
-               <string>Saturday</string>
+               <string>saturday</string>
               </property>
              </item>
              <item>
               <property name="text">
-               <string>Sunday</string>
+               <string>sunday</string>
               </property>
              </item>
              <item>
               <property name="text">
-               <string>Monday</string>
+               <string>monday</string>
               </property>
              </item>
              <item>
               <property name="text">
-               <string>Tuesday</string>
+               <string>tuesday</string>
               </property>
              </item>
              <item>
               <property name="text">
-               <string>Wednesday</string>
+               <string>wednesday</string>
               </property>
              </item>
              <item>
               <property name="text">
-               <string>Thursday</string>
+               <string>thursday</string>
               </property>
              </item>
             </widget>
@@ -130,98 +241,12 @@
               </size>
              </property>
              <property name="text">
-              <string> From :</string>
+              <string> New Time :</string>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QComboBox" name="comboBox">
-             <property name="maximumSize">
-              <size>
-               <width>200</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <item>
-              <property name="text">
-               <string>11:00</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>12:00</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>01:30</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>03:00</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>04:30</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>06:00</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_7">
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string> Patient :</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>300</width>
-               <height>16777215</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_4">
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string> Date :</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QDateEdit" name="dateEdit">
              <property name="maximumSize">
               <size>
                <width>200</width>
@@ -237,10 +262,10 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
-          <widget class="QPushButton" name="addrecord">
+          <widget class="QPushButton" name="updateappointment">
            <property name="maximumSize">
             <size>
-             <width>250</width>
+             <width>300</width>
              <height>1000</height>
             </size>
            </property>
@@ -258,42 +283,6 @@ color: rgb(255, 255, 255);</string>
            <property name="text">
             <string>  Update Appointment </string>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QTableWidget" name="tableWidget">
-           <property name="styleSheet">
-            <string notr="true">border-color: rgb(152, 152, 152);</string>
-           </property>
-           <column>
-            <property name="text">
-             <string>Patient Name</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Day</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>at</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Date</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Attendance</string>
-            </property>
-           </column>
           </widget>
          </item>
         </layout>
