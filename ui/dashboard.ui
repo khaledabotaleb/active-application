@@ -484,7 +484,7 @@ font-size: 11pt;
     <addaction name="addrecordmenu"/>
     <addaction name="actionRefresh"/>
     <addaction name="actionFind_Entry"/>
-    <addaction name="actionSettings"/>
+    <addaction name="actionStaff"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
@@ -548,7 +548,7 @@ font-size: 11pt;
     <string>Ctrl+Q</string>
    </property>
   </action>
-  <action name="actionSettings">
+  <action name="actionStaff">
    <property name="icon">
     <iconset>
      <normaloff>icons/icons8-nurse-male-48.png</normaloff>icons/icons8-nurse-male-48.png</iconset>

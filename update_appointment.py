@@ -49,8 +49,8 @@ class UpdateAppointment(QWidget):
              .where(Appointments.id == id))
         q.execute()
         new_time = Appointments.select(Appointments.available_day_id).where(Appointments.id==id)
-        appointments_num_for_old = Appointments.select().where(Appointments.available_day_id == old_time).count()
-        appointments_num_for_new = Appointments.select().where(Appointments.available_day_id == new_time).count()
+        appointments_num_for_old = Appointments.select().distinct(Appointments.patient_id).where(Appointments.available_day_id == old_time).count()
+        appointments_num_for_new = Appointments.select().distinct(Appointments.patient_id).where(Appointments.available_day_id == new_time).count()
         if appointments_num_for_old < 6:
             available_day = (AvailableDays.update({AvailableDays.closed: False}).where(AvailableDays.id==old_time))
             available_day.execute()

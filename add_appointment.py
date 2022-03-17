@@ -45,7 +45,7 @@ class AddAppointment(QWidget):
         date = self.date.text()
 
         appointment = Appointments.create(date=date, attendance=True, patient_id=patient, available_day_id=time)
-        appointments_num = Appointments.select().where(Appointments.available_day_id == time).count()
+        appointments_num = Appointments.select().distinct(Appointments.patient_id).where(Appointments.available_day_id == time).count()
         if appointments_num == 6:
             available_day = (AvailableDays.update({AvailableDays.closed: True}).where(AvailableDays.id==time))
             available_day.execute()
@@ -76,7 +76,7 @@ class AddAppointment(QWidget):
             self.tableWidget.setCellWidget(rowindex, 5, self.btn_update)
             self.btn_delete = QPushButton('Delete')
             self.btn_delete.button_row = item.id
-            # self.btn_delete.clicked.connect(self.handleButtonClicked)
+            self.btn_delete.clicked.connect(self.handleDeleteButtonClicked)
             self.tableWidget.setCellWidget(rowindex, 6, self.btn_delete)
             rowindex = rowindex + 1
 
@@ -84,3 +84,21 @@ class AddAppointment(QWidget):
         button = self.sender()
         self.editwindow = UpdateAppointment(button.button_row)
         self.editwindow.show()
+
+    def handleDeleteButtonClicked(self):
+        button = self.sender()
+        appointment_id = button.button_row
+        appointment = Appointments.get(id=int(appointment_id))
+        msgBox = QMessageBox()
+        msgBox.setIcon(QMessageBox.Information)
+        msgBox.setText("Want to delete appointment of ID = " + str(appointment_id))
+        msgBox.setWindowTitle("Confirmation")
+        msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+        returnValue = msgBox.exec()
+        if returnValue == QMessageBox.Ok:
+            Appointments.delete_by_id(int(appointment_id))
+            appointments_num_for_new = Appointments.select().distinct(Appointments.patient_id).where(Appointments.available_day_id == appointment.available_day_id).count()
+            if appointments_num_for_new < 6:
+                available_day = (AvailableDays.update({AvailableDays.closed: False}).where(AvailableDays.id == appointment.available_day_id))
+                available_day.execute()
+        self.show_patient_appointments()

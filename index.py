@@ -8,6 +8,7 @@ import psycopg2
 import sys
 
 from add_appointment import AddAppointment
+from add_staff import AddStaff
 from addpatient import AddPatient
 from DB_Structure import Patient
 from edit_patient import EditPatient
@@ -42,6 +43,10 @@ class Dashboard(QMainWindow, DashboardUI):
         # appointment action
         self.appointmentAction = self.findChild(QAction, "actionRefresh")
         self.appointmentAction.triggered.connect(self.load_add_appointment_menu)
+
+        # staff action
+        self.staffAction = self.findChild(QAction, "actionStaff")
+        self.staffAction.triggered.connect(self.load_staff_menu)
 
     def Db_connect(self):
         # connection between app and db
@@ -101,6 +106,10 @@ class Dashboard(QMainWindow, DashboardUI):
 
     def load_add_appointment_menu(self):
         self.window = AddAppointment()
+        self.window.show()
+
+    def load_staff_menu(self):
+        self.window = AddStaff()
         self.window.show()
 
 def main():
