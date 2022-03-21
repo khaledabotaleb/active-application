@@ -45,6 +45,7 @@ class Staff(Model):
     role = CharField(null=True)
     address = TextField(null=True)
     gender = CharField(null=True)
+    mobile = IntegerField(null=True)
 
     class Meta:
         database = db

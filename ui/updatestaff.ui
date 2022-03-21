@@ -88,7 +88,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_2"/>
+            <widget class="QLineEdit" name="name_lineEdit"/>
            </item>
            <item>
             <widget class="QLabel" name="label">
@@ -98,7 +98,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox">
+            <widget class="QSpinBox" name="age_spinBox">
              <property name="minimumSize">
               <size>
                <width>70</width>
@@ -115,13 +115,33 @@
             </widget>
            </item>
            <item>
-            <widget class="QComboBox" name="comboBox">
+            <widget class="QComboBox" name="role_comboBox">
              <property name="minimumSize">
               <size>
                <width>200</width>
                <height>1</height>
               </size>
              </property>
+             <item>
+              <property name="text">
+               <string>Doctor</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Nurse</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Secretary</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Worker</string>
+              </property>
+             </item>
             </widget>
            </item>
           </layout>
@@ -142,7 +162,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit">
+            <widget class="QLineEdit" name="address_lineEdit">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -171,7 +191,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QComboBox" name="comboBox_2">
+            <widget class="QComboBox" name="gender_comboBox">
              <item>
               <property name="text">
                <string>Male</string>
@@ -187,12 +207,18 @@
            <item>
             <widget class="QLabel" name="label_6">
              <property name="text">
-              <string> Salary :</string>
+              <string> Mobile :</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_3">
+            <widget class="QLineEdit" name="mobile_lineEdit">
+             <property name="minimumSize">
+              <size>
+               <width>135</width>
+               <height>1</height>
+              </size>
+             </property>
              <property name="maximumSize">
               <size>
                <width>100</width>
@@ -208,11 +234,11 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
-          <widget class="QPushButton" name="addrecord">
+          <widget class="QPushButton" name="update_staff">
            <property name="maximumSize">
             <size>
-             <width>250</width>
-             <height>50</height>
+             <width>200</width>
+             <height>40</height>
             </size>
            </property>
            <property name="font">

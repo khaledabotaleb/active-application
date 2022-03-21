@@ -106,33 +106,6 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="printButton">
-        <property name="font">
-         <font>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-	padding : 10px 10px 10px 10px;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icons/printer(1).png</normaloff>icons/printer(1).png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>28</width>
-          <height>28</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="refresh">
         <property name="font">
          <font>
@@ -160,100 +133,6 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="font">
-         <font>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-	padding : 10px 10px 10px 10px;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icons/Bar-chart-icon.png</normaloff>icons/Bar-chart-icon.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>28</width>
-          <height>28</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="font">
-         <font>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-	padding : 10px 10px 10px 10px;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icons/settings.png</normaloff>icons/settings.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>28</width>
-          <height>28</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="font">
-         <font>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-	padding : 10px 10px 10px 10px;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icons/account.png</normaloff>icons/account.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>28</width>
-          <height>28</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QLabel" name="label_6">
         <property name="text">
          <string/>
@@ -263,83 +142,7 @@
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Search By:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QComboBox" name="filterFlag">
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-         </font>
-        </property>
-        <item>
-         <property name="text">
-          <string>Name</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Sex</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Age</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>What to search:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="searchField">
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-         </font>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <layout class="QHBoxLayout" name="horizontalLayout_2"/>
     </item>
     <item>
      <widget class="QTableWidget" name="tableWidget">
@@ -387,17 +190,47 @@ font-size: 11pt;
       </column>
       <column>
        <property name="text">
-        <string>Visit Time</string>
+        <string>Age</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Date</string>
+        <string>Gender</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Day</string>
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Status</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>disease</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Comming From</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Diagnosis</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Weight</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Height</string>
        </property>
       </column>
      </widget>
@@ -497,15 +330,6 @@ font-size: 11pt;
    </property>
    <property name="text">
     <string>Help</string>
-   </property>
-  </action>
-  <action name="actionRemove_Account">
-   <property name="icon">
-    <iconset>
-     <normaloff>icons/Logout_37127.png</normaloff>icons/Logout_37127.png</iconset>
-   </property>
-   <property name="text">
-    <string>Remove Account</string>
    </property>
   </action>
  </widget>

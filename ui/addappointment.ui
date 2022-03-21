@@ -232,6 +232,9 @@ color: rgb(255, 255, 255);</string>
            <property name="styleSheet">
             <string notr="true">border-color: rgb(152, 152, 152);</string>
            </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
            <column>
             <property name="text">
              <string>Patient name</string>

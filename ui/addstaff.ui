@@ -257,14 +257,18 @@ color: rgb(255, 255, 255);</string>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
           <widget class="QTableWidget" name="tableWidget">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-color: rgb(152, 152, 152);</string>
            </property>
-           <column>
-            <property name="text">
-             <string>ID</string>
-            </property>
-           </column>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="sortingEnabled">
+            <bool>true</bool>
+           </property>
            <column>
             <property name="text">
              <string>Name</string>
@@ -282,12 +286,22 @@ color: rgb(255, 255, 255);</string>
            </column>
            <column>
             <property name="text">
-             <string>Attendance</string>
+             <string>Address</string>
             </property>
            </column>
            <column>
             <property name="text">
-             <string>Address</string>
+             <string>Mobile</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Update</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Delete</string>
             </property>
            </column>
           </widget>
