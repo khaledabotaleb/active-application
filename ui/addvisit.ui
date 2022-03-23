@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>775</width>
-    <height>578</height>
+    <width>955</width>
+    <height>588</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -60,8 +60,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>751</width>
-        <height>496</height>
+        <width>931</width>
+        <height>506</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -78,15 +78,15 @@
               </size>
              </property>
              <property name="text">
-              <string>Doctor :</string>
+              <string> Patient : </string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QComboBox" name="comboBox">
+            <widget class="QComboBox" name="patient_comboBox">
              <property name="minimumSize">
               <size>
-               <width>300</width>
+               <width>200</width>
                <height>1</height>
               </size>
              </property>
@@ -96,37 +96,34 @@
                <height>16777215</height>
               </size>
              </property>
-             <item>
-              <property name="text">
-               <string>New Item</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>New Item</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>New Item</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>New Item</string>
-              </property>
-             </item>
             </widget>
            </item>
            <item>
             <widget class="QLabel" name="label">
              <property name="text">
-              <string> Recovery Percentage :</string>
+              <string> Doctor :</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit"/>
+            <widget class="QComboBox" name="doctor_comboBox">
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>1</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string> Recovery Percentage : </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="percentage_lineEdit"/>
            </item>
           </layout>
          </item>
@@ -135,11 +132,11 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
-          <widget class="QPushButton" name="addrecord">
+          <widget class="QPushButton" name="addvisit">
            <property name="maximumSize">
             <size>
-             <width>250</width>
-             <height>45</height>
+             <width>200</width>
+             <height>40</height>
             </size>
            </property>
            <property name="font">
@@ -165,11 +162,20 @@ color: rgb(255, 255, 255);</string>
          <item>
           <widget class="QTableWidget" name="tableWidget">
            <property name="styleSheet">
-            <string notr="true">border-color: rgb(152, 152, 152);</string>
+            <string notr="true">QHeaderView::section{
+text-align:center;
+background:#CDCDCD;
+padding:1px;
+margin:0px;
+color:#000;
+border:1px solid #BABABA;
+border-left-width:0;
+font-size: 9pt;
+}</string>
            </property>
            <column>
             <property name="text">
-             <string>Patient ID</string>
+             <string>Patient Name</string>
             </property>
            </column>
            <column>
@@ -189,7 +195,7 @@ color: rgb(255, 255, 255);</string>
            </column>
            <column>
             <property name="text">
-             <string>Percentage</string>
+             <string>Recovery Percent</string>
             </property>
            </column>
           </widget>

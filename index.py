@@ -9,11 +9,13 @@ import psycopg2
 
 import sys
 
+from Patients import LoadPatients
 from add_appointment import AddAppointment
 from add_staff import AddStaff
 from addpatient import AddPatient
 from DB_Structure import Patient, Appointments, AvailableDays
 from edit_patient import EditPatient
+from visits import Visit
 
 DashboardUI, _ = loadUiType("ui/dashboard.ui")
 
@@ -41,6 +43,15 @@ class Dashboard(QMainWindow, DashboardUI):
         # delete button
         self.deleteButton = self.findChild(QPushButton, "deleteButton")
         self.deleteButton.clicked.connect(self.Delete_patient)
+
+        # Load Visit Page
+        # visit_pushButton
+        self.VisitButton = self.findChild(QPushButton, "visit_pushButton")
+        self.VisitButton.clicked.connect(self.load_visit_page)
+        # patient menu action
+        # actionPatient
+        self.patientAction = self.findChild(QAction, "actionPatient")
+        self.patientAction.triggered.connect(self.load_patient_menu)
 
         # appointment action
         self.appointmentAction = self.findChild(QAction, "actionRefresh")
@@ -108,6 +119,14 @@ class Dashboard(QMainWindow, DashboardUI):
             patient.delete_by_id(int(selected_id))
 
         self.Show_all_patients()
+
+    def load_visit_page(self):
+        self.window = Visit()
+        self.window.show()
+
+    def load_patient_menu(self):
+        self.window = LoadPatients()
+        self.window.show()
 
     def load_add_appointment_menu(self):
         self.window = AddAppointment()

@@ -178,6 +178,17 @@ font-size: 11pt;
       <property name="rowCount">
        <number>0</number>
       </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Id</string>
+       </property>
+      </column>
       <column>
        <property name="text">
         <string>Name</string>

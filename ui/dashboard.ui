@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>649</width>
+    <width>650</width>
     <height>504</height>
    </rect>
   </property>
@@ -160,7 +160,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="visit_pushButton">
         <property name="font">
          <font>
           <pointsize>15</pointsize>
@@ -176,7 +176,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>icons/Bar-chart-icon.png</normaloff>icons/Bar-chart-icon.png</iconset>
+          <normaloff>icons/doctor-consultation-icon-beautiful-meticulously-designed-165835549.png</normaloff>icons/doctor-consultation-icon-beautiful-meticulously-designed-165835549.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -409,7 +409,7 @@ font-size: 11pt;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>649</width>
+     <width>650</width>
      <height>26</height>
     </rect>
    </property>
@@ -417,7 +417,7 @@ font-size: 11pt;
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="addrecordmenu"/>
+    <addaction name="actionPatient"/>
     <addaction name="actionRefresh"/>
     <addaction name="actionFind_Entry"/>
     <addaction name="actionStaff"/>
@@ -427,7 +427,7 @@ font-size: 11pt;
    <addaction name="menuFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="addrecordmenu">
+  <action name="actionPatient">
    <property name="icon">
     <iconset>
      <normaloff>icons/005-add.png</normaloff>icons/005-add.png</iconset>

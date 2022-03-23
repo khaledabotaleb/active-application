@@ -74,3 +74,4 @@ class EditPatient(QWidget):
              .where(Patient.id == id))
         q.execute()
         QMessageBox.about(self, "Patient", "Update patient")
+        self.window().close()
